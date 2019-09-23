@@ -1,14 +1,14 @@
 package com.hongjun423.springinit;
 
-import org.springframework.boot.context.event.ApplicationStartingEvent;
-import org.springframework.context.ApplicationListener;
+import org.springframework.boot.ApplicationArguments;
+import org.springframework.stereotype.Component;
 
-public class SampleListener implements ApplicationListener<ApplicationStartingEvent> {
+@Component
+public class SampleListener {
 
-    @Override
-    public void onApplicationEvent(ApplicationStartingEvent applicationStartingEvent) {
-        System.out.println("========================");
-        System.out.println("Application is Starting");
-        System.out.println("========================");
+    public SampleListener(ApplicationArguments arguments) {
+        System.out.println("foo: " + arguments.containsOption("foo"));
+        System.out.println("bar: " + arguments.containsOption("bar"));
+
     }
 }
