@@ -17,6 +17,7 @@ public class SampleRunner implements ApplicationRunner {
         System.out.println("============================");
         System.out.println(myProperties.getName() + ", " + myProperties.getAge());
         System.out.println(myProperties.getFullName());
+        System.out.println(myProperties.getSessionTimeout());
         System.out.println("============================");
 
     }
