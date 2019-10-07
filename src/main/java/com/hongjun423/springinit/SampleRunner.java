@@ -21,11 +21,11 @@ public class SampleRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        logger.warn("============================");
-        logger.info(hello);
+        logger.debug("============================");
+        logger.debug(hello);
         logger.debug(myProperties.getName());
-        logger.info(myProperties.getFullName());
-        logger.warn("============================");
+        logger.debug(myProperties.getFullName());
+        logger.debug("============================");
 
     }
 }
